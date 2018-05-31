@@ -14,9 +14,9 @@ int main()
     int i,
         cant,
         num,
-        act_a = 0, //suma de los múltiplos de 3
-        act_b = 0, //cantidad de múltiplos de 5
-        act_c = 0; //suma de los valores ingresados en orden par.
+        act_a = 0, /*suma de los múltiplos de 3*/
+        act_b = 0, /*cantidad de múltiplos de 5*/
+        act_c = 0; /*suma de los valores ingresados en orden par*/
 
     printf("Ingrese un numero: ");
     scanf("%d", &cant);

@@ -18,7 +18,7 @@ int main()
 
     for (i = 0; i < 40; i++)
     {
-        //Insertar y validar DNI
+        /*Insertar y validar DNI*/
         while (1)
         {
             printf("DNI: ");
@@ -34,7 +34,7 @@ int main()
             }
         }
 
-        //Insertar y validar nota
+        /*Insertar y validar nota*/
         while (1)
         {
             printf("Nota: ");
@@ -50,7 +50,7 @@ int main()
             }
         }
 
-        //chequear la nota
+        /*chequear la nota*/
         if (nota == mejor_nota)
         {
             mejores[cont_mejores] = dni;

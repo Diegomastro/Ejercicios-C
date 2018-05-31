@@ -9,9 +9,9 @@ int main()
 {
     int i,
         j,
-        cant = 1; //Arranca en 1, porque esta contando el '2' de la linea siguiente
+        cant = 1; /*Arranca en 1, porque esta contando el '2' de la linea siguiente*/
 
-    printf("2, "); // 2 es el unico primo par, entonces lo pongo aca y chequeo solo los impares;
+    printf("2, "); /* 2 es el unico primo par, entonces lo pongo aca y chequeo solo los impares*/
 
     for (i = 3; i < 100; i += 2)
     {

@@ -23,6 +23,11 @@ Informar:
 #include <conio.h>
 #include <ctype.h>
 
+/*
+Pide al usuario y valida un legajo
+VALORES VALIDOS:
+(1000 <= valor <= 5000) || 0
+*/
 int get_legajo()
 {
     int legajo;
@@ -39,6 +44,11 @@ int get_legajo()
     }
 }
 
+/*
+Pide al usuario y valida un sueldo
+VALORES VALIDOS:
+(valor > 1000)
+*/
 float get_sueldo()
 {
     float sueldo;
@@ -55,6 +65,11 @@ float get_sueldo()
     }
 }
 
+/*
+Pide al usuario y valida la antiguedad de un empleado
+VALORES VALIDOS:
+(valor >= 0)
+*/
 int get_antig()
 {
     int antig;
@@ -71,13 +86,18 @@ int get_antig()
     }
 }
 
+/*
+Pide al usuario y valida el sexo 
+VALORES VALIDOS:
+'M' || 'F'
+*/
 char get_sexo()
 {
     int sexo;
     while (1)
     {
         printf("Sexo: ");
-        fflush(stdin); //No tendria que hacer falta, pero por seguridad
+        fflush(stdin); /*No tendria que hacer falta, pero por las dudas*/
         sexo = toupper(getchar());
         fflush(stdin);
         if (sexo == 'M' || sexo == 'F')
@@ -88,6 +108,11 @@ char get_sexo()
     }
 }
 
+/*
+Pide al usuario y valida la categoria de importancia.
+VALORES VALIDOS:
+(1 <= valor <= 5)
+*/
 int get_categ()
 {
     int categ;

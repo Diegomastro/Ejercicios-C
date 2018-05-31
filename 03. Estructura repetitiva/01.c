@@ -7,6 +7,9 @@ Imprimir los legajos cuya nota sea mayor a 8.
 #include <stdio.h>
 #define CANT_ALUMNOS 20
 
+/*
+Pide al usuario y valida una nota (0 < nota < 10) 
+*/
 int get_nota()
 {
     int nota;
@@ -20,17 +23,24 @@ int get_nota()
     return nota;
 }
 
-int get_cond(int nota) // 0 = Aplazo 1 = aprobado 2 = muy bien
+/*
+Segun 'nota', se fija en que condicion esta el alumno
+RETURNS:
+0 = Aplazo 
+1 = aprobado 
+2 = muy bien
+*/
+int get_cond(int nota) 
 {
-    int cond = 1; //aprobado
+    int cond = 1;
 
     if (nota < 4)
     {
-        cond = 0;  //Aplazo
+        cond = 0;
     }
     else if (nota > 8)
     {
-        cond = 2; //muybien
+        cond = 2;
     }
     return cond;
 }

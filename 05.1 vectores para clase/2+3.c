@@ -10,6 +10,14 @@ b. El / los productos del cual se solicitaron menos cantidad de unidades
 #include <stdio.h>
 #include <conio.h>
 
+/*
+Pide al usuario que ingrese codigos de productos
+VALORES VALIDOS:
+(Numeros de 4 cifras) || (una letra || 0)
+ARGS:
+v[] = array donde se guardan los codigos
+len = tamaño del array 
+*/
 void IngresaCodigos(int v[], int len)
 {
 	int i = 0, j;
@@ -37,6 +45,14 @@ void IngresaCodigos(int v[], int len)
 	}
 }
 
+/*
+Pide al usuario que ingrese y valida un codigo
+VALORES VALIDOS:
+(valores en 'cods[]')
+ARGS:
+cods[] = lista de codigos validos
+len    = tamaño del array
+*/
 int get_cod(int cods[], int len)
 {
 	int cod;
@@ -62,6 +78,11 @@ int get_cod(int cods[], int len)
 	return cod;
 }
 
+/*
+Pide al usuario y valida una cantidad
+VALORES VALIDOS:
+(cant > 0)
+*/
 int get_cant()
 {
 	int cant;
@@ -76,8 +97,15 @@ int get_cant()
 	return cant;
 }
 
-/*solo funciona con valores validados,
-NO CUBRE SI NUM NO ESTA EN V[] */
+/*
+Devuelve el valor de la primera ocurrencia de 'num' en 'v'
+ARGS:
+num = valor a buscar
+v[] = array en el que buscar
+NOTAS:
+*Solo funciona con valores validados,
+*NO CUBRE SI NUM NO ESTA EN V[] 
+*/
 int find_index(int num, int v[]) 
 {                                
 	int i = 0;
@@ -89,23 +117,12 @@ int find_index(int num, int v[])
 	return i;
 }
 
-
-/* NO HACE FALTA QUE NUM ESTE EN V[] */
-int find_index_safe(int num, int v[], int len)
-{
-	int i = 0,
-		pos = -1;
-	while(pos == -1 && i < len)
-	{
-		if (num == v[i])
-		{
-			pos = i;
-		}
-		i++;
-	}
-	return pos;
-}
-
+/*
+Devuelve el mayor numero en un array
+ARGS:
+v[] = array en el que buscar
+len = tamaño del array
+*/
 int get_mayor(int v[], int len)
 {
 	int mayor = v[0];
@@ -121,6 +138,12 @@ int get_mayor(int v[], int len)
 	return mayor;
 }
 
+/*
+Devuelve el menor numero en un array
+ARGS:
+v[] = array en el que buscar
+len = tamaño del array
+*/
 int get_menor(int v[], int len)
 {
 	int menor = v[0];
@@ -135,6 +158,14 @@ int get_menor(int v[], int len)
 	return menor;
 }
 
+/*
+Si una condicion se cumple en arr1[i], print arr2[i]
+ARGS:
+value          = valor para la condicion
+arr_to_look[]  = array sobre el que se chequea la condicion
+arr_to_print[] = array que se printea 
+len            = tamaño de los arrays
+*/
 void parallel_print(int value,int arr_to_look[],  int arr_to_print[], int len)
 {
 	int i;

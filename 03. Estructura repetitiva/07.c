@@ -17,7 +17,7 @@ int main()
     int dni,
         n1,
         n2,
-        condicion, //flag:  0=prom; 1=aprob; 2=reprob;
+        condicion, /*0=prom; 1=aprob; 2=reprob*/
         cant_promocionados = 0,
         suma_promocionados = 0;
     float promedio_promocionados;
@@ -33,7 +33,7 @@ int main()
         scanf("%d%d", &n1, &n2);
         fflush(stdin);
         printf("---\n");
-        if (n1 < 0 || n1 > 10 ||  n2 < 0 || n2 > 10) //notas fuera de rango
+        if (n1 < 0 || n1 > 10 ||  n2 < 0 || n2 > 10) /*notas fuera de rango*/
         {
             printf("ERROR! \n");
             continue;
@@ -41,17 +41,17 @@ int main()
 
         if (n1 >= 7 && n2 >= 7)
         {
-            condicion = 0; //promocionado
+            condicion = 0; /*promocionado*/
             cant_promocionados += 1;
             suma_promocionados += n1 + n2;
         }
         else if (n1 >= 4 && n2 >= 4)
         {
-            condicion = 1; //aprobado
+            condicion = 1; /*aprobado*/
         }
         else
         {
-            condicion = 2; //reprobado
+            condicion = 2; /*reprobado*/
         }
 
         printf("DNI: %d \n", dni);

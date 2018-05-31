@@ -5,6 +5,12 @@ uno y genere un vector de 10 posiciones con el contenido de ambos vectores inter
 #include <stdio.h>
 #include <conio.h>
 
+/*
+Llena un array
+ARGS:
+vec[] = el array a llenar
+len   = tamaño del array
+*/
 void carga(int vec[], int len)
 {
     int i;
@@ -16,6 +22,16 @@ void carga(int vec[], int len)
     }
 }
 
+/*
+intercala dos arrays intercalados. Ej:
+v1 = {1,2,3,4,5}
+v2 = {6,7,8,9,10}
+v3 = {1,6,2,7,3,8,4,9,5,10}
+ARGS:
+v1[] = primer array a intercalar
+v2[] = segundo array a intercalar
+v3[] = v1 y v2 intercalados
+*/
 void combinar(int v1[], int v2[], int v3[])
 {
     int i;
@@ -33,6 +49,12 @@ void combinar(int v1[], int v2[], int v3[])
 
 }
 
+/*
+Printea un array
+ARGS:
+vec[] = array a mostrar
+len   = tamaño del array
+*/
 void mostrar(int vec[], int len)
 {
     int i;

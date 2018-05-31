@@ -7,6 +7,11 @@ NOTA: TODOS LOS ARTICULOS TIENEN PRECIOS DISTINTOS
 #include <conio.h>
 #include <limits.h>
 
+/*
+Pide al usuario y valida una cantidad.
+VALORES VALIDOS:
+(valor > 0)
+*/
 int get_cant()
 {
     int cant;
@@ -23,7 +28,11 @@ int get_cant()
     }
 }
 
-
+/*
+Pide al usuario y valida un codigo.
+VALORES VALIDOS:
+(valor >= 0 )
+*/
 int get_cod()
 {
     int cod;
@@ -42,6 +51,11 @@ int get_cod()
 }
 
 
+/*
+Pide al usuario y valida un precio.
+VALORES VALIDOS:
+(valor > 0)
+*/
 float get_precio()
 {
     float precio;

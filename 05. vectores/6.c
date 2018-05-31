@@ -15,6 +15,12 @@ b) Indicar el/los vendedores que realizaron menor cantidad de ventas (no de unid
 
 #include <stdio.h>
 
+/*
+Printea un array
+ARGS:
+arr[] = array a mostrar
+len   = tamaño del array
+*/
 void printarr(int arr[], int len)
 {
 	int i;
@@ -25,6 +31,16 @@ void printarr(int arr[], int len)
 	printf("\n");
 }
 
+/*
+Printea dos arrays en paralelo. por ej
+arr1 = {'a1', 'a2', 'a3'}
+arr2 = {'b1', 'b2', 'b3'}
+result = 'a1' 'b1' ; 'a2' 'b2' ; 'a3' 'b3' 
+ARGS:
+arr1[] = primer array a mostrar
+arr2[] = segundo array a mostrar
+len    = tamaño de los arrays 
+*/
 void print_paralelo(int arr1[], int arr2[], int len)
 {
 	int i;
@@ -34,6 +50,17 @@ void print_paralelo(int arr1[], int arr2[], int len)
 	}
 }
 
+/*
+ordena de menor a mayor un array, y hace los mismos movimientos en el segundo. 
+Funciona como un dict de  python. ej:
+arr1 {3,1,2}
+arr2 {'bananas', 'manzanas', 'naranjas'}
+result : {1,2,3} ; {'manzanas', 'naranjas', 'bananas'}
+ARGS:
+arr1[] = array a evaluar, array independiente
+arr2[] = array dependiente
+len    = tamaño de los arrays
+*/
 void sort_paralelo(int arr1[], int arr2[], int len)
 {
 	int i, 
@@ -58,7 +85,16 @@ void sort_paralelo(int arr1[], int arr2[], int len)
 	}
 }
 
-/* Devuelve la posicion de la primera ocurrencia de 'valor' en 'arr'*/
+/* 
+Devuelve la posicion de la primera ocurrencia de 'valor' en 'arr'
+ARGS:
+valor = valor a buscar
+arr[] = array en el que buscar 'valor'
+len   = tamaño del array
+RETURNS:
+-1 = 'valor' no esta en 'arr'
+otro = posicion de la primera ocurrencia de 'valor' en 'arr'
+*/
 int indexof(int valor, int arr[], int len) 
 {
 	int i;
@@ -72,6 +108,12 @@ int indexof(int valor, int arr[], int len)
 	return -1;
 }
 
+/*
+Pide al usuario que cargue 15 productos.
+VALORES VALIDOS:
+(Numeros de 3 cifras) &&
+(Cada valor puede ser ingresado una sola vez)
+*/
 void get_productos(int productos[])
 {
 	int i;
@@ -95,6 +137,11 @@ void get_productos(int productos[])
 	}
 }
 
+/*
+Pide al usuario y valida el codigo de vendedor
+VALORES VALIDOS:
+(1001 <= valor <= 1005) || 0
+*/
 int get_vendedor()
 {
 	int vendedor;
@@ -109,6 +156,13 @@ int get_vendedor()
 	return vendedor;
 }
 
+/*
+Pide al usuario y valida un codigo de producto
+VALORES VALIDOS:
+(Numeros que esten en 'productos')
+ARGS:
+productos[] = lista de codigos validos
+*/
 int get_cod(int productos[])
 {
 	int cod;
@@ -123,6 +177,11 @@ int get_cod(int productos[])
 	return cod;
 }
 
+/*
+Pide al usuario y valida una cantidad
+VALORES VALIDOS:
+(valor > 0)
+*/
 int get_cant()
 {
 	int cant;
@@ -162,7 +221,6 @@ int main()
 		ventas[vendedor-1001] ++;
 		printf("VENTA REGISTRADA! \n");
 	}
-	/* HAY UN PRINT DE MAS DE ACA PARA ABAJO PERO NO LO ENCUENTRO; printea '1 1001' */
 	sort_paralelo(vendidas, productos, 15);
 	print_paralelo(productos, vendidas, 15);
 	printf("---\n");

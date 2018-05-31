@@ -9,15 +9,30 @@ b) La máxima nota obtenida y el DNI de los alumnos que la obtuvieron
 #include <stdio.h>
 #include <conio.h>
 
+/*
+Pide al usuario y valida un DNI
+VALORES VALIDOS:
+(Numeros de 8 cifras)
+*/
 int get_dni()
 {
     int num;
+    while (1)
+    {   
     printf("DNI: ");
     scanf("%d", &num);
     fflush(stdin);
+    if (10000000 <= num && num <= 99999999) break;
+    printf("DNI INVALIDO! DEBE TENER 8 CIFRAS \n");
+    }
     return num;
 }
 
+/*
+Pide al usuario y valida una nota
+VALORES VALIDOS:
+(0 <= valor <= 10)
+*/
 int get_nota()
 {
     int num;
@@ -27,10 +42,17 @@ int get_nota()
     scanf("%d", &num);
     fflush(stdin);
     if (0 <= num && num <= 10) break;
+    printf("NOTA INVALIDA! DEBE SER ENTRE 0-10 \n")
     }
     return num;
 }
 
+/*
+Pone en 0 todos los elementos de un array
+ARGS:
+arr[] = array a setear en '0'
+len   = tamaño del array (o posicion hasta la que se quiere poner 0s)
+*/
 void vaciar(int arr[], int len)
 {
     int i;
@@ -40,6 +62,13 @@ void vaciar(int arr[], int len)
     }
 }
 
+/*
+Reemplaza el primer 0 del array por un valor
+ARGS:
+valor = valor a agregar
+arr[] = array en el que agregar a 'valor'
+len   = tamaño del array  
+*/
 void append(int valor, int arr[], int len)
 {
     int i;
@@ -52,6 +81,7 @@ void append(int valor, int arr[], int len)
         }
     }
 }
+
 int main()
 {
     int dnis[60] = {0};

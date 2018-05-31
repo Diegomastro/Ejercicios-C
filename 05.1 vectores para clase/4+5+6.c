@@ -13,6 +13,11 @@ e. Mostrar un listado ordenado de menor a mayor por cantidad de empleados en cad
 #include <stdio.h>
 #include <conio.h>
 
+/*
+Pide al usuario y valida un DNI
+VALORES VALIDOS:
+(Numeros de 8 cifras) || 99
+*/
 int get_dni()
 {
 	int dni;
@@ -27,6 +32,11 @@ int get_dni()
 	return dni;
 }
 
+/*
+Pide al usuario y valida el cod. de sector de un empleado
+VALORES VALIDOS:
+(1 <= valor <= 5)
+*/
 int get_sector()
 {
 	int sector;
@@ -41,6 +51,11 @@ int get_sector()
 	return sector;
 }
 
+/*
+Pide al usuario y valida el sueldo de un empleado
+VALORES VALIDOS:
+(valor > 0)
+*/
 float get_sueldo()
 {
 	float sueldo;
@@ -55,6 +70,14 @@ float get_sueldo()
 	return sueldo;
 }
 
+/*
+Se encarga de la carga de datos
+ARGS:
+num      = num de empleado, indice a utilizar para guardar en los arrays
+dni[]    = array donde se guardan los dnis de todos los empleados
+sector[] = array donde se guarda el sector de todos los empleados
+sueldo[] = array donde se guardan los sueldos de todos los empleados
+*/
 void cargaEmpleados(int num, int dni[], int sector[], float sueldo[])
 {
 	int cod;
@@ -67,6 +90,12 @@ void cargaEmpleados(int num, int dni[], int sector[], float sueldo[])
 	sueldo[num] = get_sueldo();
 }
 
+/*
+Printea un array
+ARGS:
+arr[] = array a mostrar
+len   = tamaño del array
+*/
 void printarr_int(int arr[], int len)
 {
     int i;
@@ -77,6 +106,12 @@ void printarr_int(int arr[], int len)
     printf("\n");
 }
 
+/*
+Calcula la suma total de un array, en este programa va a ser sueldos
+ARGS:
+arr[] = array a sumar
+len   = tamaño del array
+*/
 float TotalAPagar(float arr[], int len)
 {
 	int i, 
@@ -89,6 +124,12 @@ float TotalAPagar(float arr[], int len)
 	return res;
 }
 
+/*
+Ordena un array de menor a mayor
+ARGS:
+arr[] = array a ordenar
+len   = tamaño del array
+*/
 void sort(int arr[], int len)
 {
 	int i,

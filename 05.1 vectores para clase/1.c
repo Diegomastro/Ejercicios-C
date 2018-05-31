@@ -10,6 +10,11 @@ Al finalizar se debe emitir un listado con código y cantidad de unidades solici
 #include <stdio.h>
 #include <conio.h>
 
+/*
+Pide al usuario y valida un codigo
+VALORES VALIDOS:
+(0 <= valor <= 10)
+*/
 int get_cod()
 {
 	int cod;
@@ -24,6 +29,11 @@ int get_cod()
 	return cod;
 }
 
+/*
+Pide al usuario y valida una cantidad
+VALORES VALIDOS:
+(valor > 0)
+*/
 int get_cant()
 {
 	int cant;

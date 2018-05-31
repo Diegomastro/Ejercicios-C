@@ -6,6 +6,11 @@ tamaño con los elementos ubicados en el orden inverso al del vector original.
 #include <stdio.h>
 #include <conio.h>
 
+/*
+Llena un array de 10 numeros
+ARGS:
+vec[] = el array a llenar
+*/
 void carga(int vec[])
 {
     int i;
@@ -17,6 +22,12 @@ void carga(int vec[])
     }
 }
 
+/*
+Invierte un array de tamaño 10
+ARGS:
+v1[] = array original
+v2[] = array invertido
+*/
 void invertir(int v1[], int v2[])
 {
     int i;
@@ -26,6 +37,12 @@ void invertir(int v1[], int v2[])
     }
 }
 
+/*
+Printea un array
+ARGS:
+vec[] = array a mostrar
+len   = tamaño del array
+*/
 void mostrar(int vec[], int len)
 {
     int i;

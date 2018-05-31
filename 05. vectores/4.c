@@ -5,6 +5,12 @@ iguales o un 0 sino lo son.
 #include <stdio.h>
 #include <conio.h>
 
+/*
+Llena un array
+ARGS:
+vec[] = el array a llenar
+len   = tamaño del array
+*/
 void carga(int vec[], int len)
 {
     int i;
@@ -16,6 +22,16 @@ void carga(int vec[], int len)
     }
 }
 
+/*
+Chequea si dos arrays son iguales
+ARGS:
+v1[] = primer array a comparar
+v2[] = segundo array a comparar
+len  = tamaño de los arrays (o hasta que posicion se quiere chequear)
+RETURNS:
+0 = False
+1 = True
+*/
 int iguales(int v1[], int v2[], int len)
 {
     int i;
